@@ -3,20 +3,20 @@ class Students {
     this.students = [];
   }
 
-  addStudent(student) {
+  enqueue(student) {
     this.students.push(student);
   }
 
-  removeStudent() {
+  dequeue() {
     if (this.students.length) {
       this.students.shift();
     }
   }
 }
-const addStudent = new Students();
-addStudent.addStudent("rafiq");
-addStudent.addStudent("sabbir");
-addStudent.addStudent("jobbar");
-addStudent.removeStudent();
-addStudent.removeStudent();
-console.log(addStudent.students);
+const names = new Students();
+names.enqueue("rafiq");
+names.enqueue("sabbir");
+names.enqueue("jobbar");
+names.dequeue();
+names.dequeue();
+console.log(names.students);
